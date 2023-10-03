@@ -1,8 +1,8 @@
 import 'package:deuquanto/splash.dart';
 import 'package:flutter/material.dart';
 
-class DeuQuantoMaterial extends StatelessWidget {
-  const DeuQuantoMaterial({super.key});
+class DeuQuantoMaterialApp extends StatelessWidget {
+  const DeuQuantoMaterialApp({super.key});
 
   @override
   Widget build(BuildContext context) {
