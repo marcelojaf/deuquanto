@@ -1,4 +1,4 @@
-import 'package:deuquanto/calculo_individual.dart';
+import 'package:deuquanto/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -20,8 +20,7 @@ class _SplashState extends State<Splash> {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      const CalculoIndividual(nome: 'Deu Quanto?'),
+                  builder: (context) => const Home(nome: 'Deu Quanto?'),
                 ),
               )
             });
