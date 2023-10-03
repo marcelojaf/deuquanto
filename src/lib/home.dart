@@ -16,30 +16,35 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: currentPageIndex == 0
-          ? const CalculoIndividual()
-          : const CalculoCarrinho(),
-      appBar: AppBar(title: Text(widget.nome)),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.money),
-            label: 'Calculo Individual',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Calculo de Compras',
-          ),
-        ],
-        currentIndex: currentPageIndex,
-        onTap: (value) => {
-          setState(
-            () {
-              currentPageIndex = value;
-            },
-          )
-        },
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        body: currentPageIndex == 0
+            ? const CalculoIndividual()
+            : const CalculoCarrinho(),
+        appBar: AppBar(title: Text(widget.nome)),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.money),
+              label: 'Calculo Individual',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Calculo de Compras',
+            ),
+          ],
+          currentIndex: currentPageIndex,
+          onTap: (value) => {
+            setState(
+              () {
+                currentPageIndex = value;
+              },
+            )
+          },
+        ),
       ),
     );
   }
